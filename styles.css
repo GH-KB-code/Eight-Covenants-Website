@@ -1,0 +1,199 @@
+/* =====================
+   Body and Global Styles
+===================== */
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* =====================
+   Header with Background Image and Overlay
+===================== */
+
+header {
+    position: relative;
+    background-image: url('https://m.media-amazon.com/images/I/71TFagKwuGL.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for glowing effect */
+}
+
+/* Overlay effect */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Slight dark overlay */
+    z-index: 0; /* Ensure the overlay is behind the text */
+}
+
+/* Hover effect to add a glow around the header */
+header:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7); /* White glow on hover */
+}
+
+/* =====================
+   Title Styling & Fade-in Animation
+===================== */
+
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    animation: fadeIn 2s ease-out forwards;
+    z-index: 1;
+    position: relative;
+}
+
+header p {
+    font-size: 1.2em;
+    animation: fadeIn 3s ease-out forwards;
+    animation-delay: 2s; /* Delays paragraph fade-in after title */
+    z-index: 1;
+    position: relative;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+/* =====================
+   Timeline Section Layout
+===================== */
+
+#timeline {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Carousel Container Styles */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#covenantList {
+    position: relative;
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.covenant-item {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    filter: grayscale(100%); /* Initially black and white */
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition to color */
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Hover effect - Image turns to color on hover */
+.circle:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%); /* Turns image to color on hover */
+}
+
+.arrow {
+    font-size: 2em;
+    color: #333;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.arrow.left {
+    left: 20px;
+}
+
+.arrow.right {
+    right: 20px;
+}
+
+/* =====================
+   Details Section Styles
+===================== */
+
+#details {
+    background-color: white;
+    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.hidden {
+    display: none;
+}
+
+/* =====================
+   Additional Styling (Hover, etc.)
+===================== */
+
+.audio-button {
+    background-color: #8ed5f8;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.audio-button:hover {
+    background-color: #7df0ff;
+}
+
