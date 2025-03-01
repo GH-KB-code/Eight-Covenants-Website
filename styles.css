@@ -193,26 +193,6 @@ header p {
     background-color: #067eaa;
 }
 
-/* =====================
-   Mobile Responsiveness (Media Queries)
-===================== */
-
-/* For small devices (mobile) */
-@media only screen and (max-width: 600px) {
-
-    /* Adjust header padding for small screens */
-    header {
-        padding: 80px 10px; /* Reduced padding */
-    }
-
-    /* Make title and paragraph smaller */
-    header h1 {
-        font-size: 2.2em;
-    }
-
-    header p {
-        font-size: 1em;
-    }
 
     /* Timeline section adjustments */
     #timeline {
@@ -252,19 +232,75 @@ header p {
     }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+* =====================
+   Mobile Responsiveness 
+===================== */
+
+/* (mobile) */
+@media only screen and (max-width: 600px) {
+
+    /* Adjust header padding for small screens */
+    header {
+        padding: 80px 10px; /* Reduced padding */
+    }
+
+    /* Make title and paragraph smaller and center the title */
+    header h1 {
+        font-size: 2.2em;
+        text-align: center;  /* Ensure the title is centered */
+    }
+
+    header p {
+        font-size: 1em;
+        text-align: center;  /* Center the paragraph as well */
+    }
+
+    /* Timeline section adjustments */
+    #timeline {
+        padding: 15px;
+        text-align: center; /* Ensure the timeline is centered */
+    }
+
     .carousel-container {
-        flex-direction: row; /* Horizontal layout */
+        flex-direction: column; /* Stack carousel vertically */
+        justify-content: center;
+    }
+
+    #covenantList {
+        display: block; /* Stack items vertically */
+        padding: 10px;
+        text-align: center; /* Center the images */
     }
 
     .covenant-item {
-        width: 120px; /* Slightly larger items */
+        margin: 10px 0;
+        width: 80%;
+        margin-left: 10%;
     }
 
+    /* Adjust circle sizes for smaller screens */
     .circle {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
+        object-fit: contain; /* Make sure the images inside the circle are not zoomed */
+    }
+
+    .circle img {
+        object-fit: contain; /* Prevent the image from being zoomed or cropped */
+    }
+
+    /* Details section */
+    #details {
+        padding: 15px;
+        max-width: 90%; /* Make the details section more flexible */
+    }
+
+    /* Ensure the header background image doesn't get too zoomed in */
+    header {
+        background-size: cover;
+        background-position: center;
     }
 }
+
 
 
