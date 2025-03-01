@@ -215,8 +215,13 @@ header p {
         text-align: center;  /* Ensure the title is centered */
     }
 
-    header p {
-        font-size: 1em;
+    header h2 {
+        font-size: 1.2em;
+        text-align: center;  /* Center the paragraph as well */
+    }
+   
+   p {
+        font-size: 1.2em;
         text-align: center;  /* Center the paragraph as well */
     }
 
