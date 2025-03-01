@@ -201,13 +201,16 @@ header p {
    Mobile Responsiveness (Media Queries)
 ===================== */
 
+* =====================
+   Mobile Responsiveness (Media Queries)
+===================== */
+
 /* For small devices (mobile) */
 @media only screen and (max-width: 600px) {
 
     /* Adjust header padding for small screens */
     header {
         padding: 80px 10px; /* Reduced padding */
-        background-attachment: scroll;
     }
 
     /* Make title and paragraph smaller */
@@ -221,9 +224,8 @@ header p {
 
     /* Timeline section adjustments */
     #timeline {
-        padding: 0 20px;
+        padding: 15px;
     }
-
 
     .carousel-container {
         flex-direction: column; /* Stack carousel vertically */
@@ -273,7 +275,5 @@ header p {
         height: 90px;
     }
 }
-
-
 
 
