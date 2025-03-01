@@ -245,9 +245,8 @@ header p {
 
     /* Adjust circle sizes for smaller screens */
     .circle {
-        width: 80px;
-        height: 80px;
-        object-fit: contain; /* Make sure the images inside the circle are not zoomed */
+        width: 90px;
+        height: 90px;
     }
 
     .circle img {
