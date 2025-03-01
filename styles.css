@@ -233,7 +233,7 @@ header p {
     /* Covenant List Styling */
     #covenantList {
         display: flex; /* Horizontal layout for items */
-        overflow-x: scroll; /* Allow horizontal scrolling */
+        flex-direction: column; /* Allow horizontal scrolling */
         padding: 0;
         gap: 16px; /* Space between items */
     }
