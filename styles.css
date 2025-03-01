@@ -204,10 +204,10 @@ header p {
 /* For small devices (mobile) */
 @media only screen and (max-width: 600px) {
 
-    /* Adjust header padding for small screens */
+    /* Adjust header padding for small screens 
     header {
-        padding: 80px 10px; /* Reduced padding */
-    }
+        padding: 80px 10px; /* Reduced padding/
+    } */
 
     /* Make title and paragraph smaller and center the title */
     header h1 {
