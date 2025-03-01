@@ -202,8 +202,19 @@ header p {
 ===================== */
 
 /* For small devices (mobile) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 950px) {
+   .cf7_custom_style_1 {
+      padding-left: 10%;
+      padding-right: 10%;
+   }
+}
 
+@media only screen and (max-width: 600px) {
+   .cf7_custom_style_1 {
+      padding-left: 0;
+      padding-right: 0;
+   }
+}
     /* Adjust header padding for small screens */
     header {
         padding: 80px 10px; 
