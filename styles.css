@@ -206,7 +206,7 @@ header p {
 
     /* Adjust header padding for small screens */
     header {
-        padding: 80px 10px; /* Reduced padding */
+        padding: 70px 10px; /* Reduced padding */
     }
 
     /* Make title and paragraph smaller and center the title */
@@ -216,7 +216,7 @@ header p {
     }
 
     header p {
-        font-size: 0.7em;
+        font-size: 1em;
         text-align: center;  /* Center the paragraph as well */
     }
 
@@ -262,7 +262,7 @@ header p {
 
     /* Ensure the header background image doesn't get too zoomed in */
     header {
-        background-size: cover;
+        background-size: contain;
         background-position: center;
     }
 }
