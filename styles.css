@@ -1,7 +1,3 @@
-/* =====================
-   Body and Global Styles
-===================== */
-
 body {
     font-family: 'Playfair Display', serif;
     background-color: #f7f7f7;
@@ -27,7 +23,28 @@ header {
     padding: 120px 20px;
     position: relative;
     overflow: hidden;
-    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for glowing effect */
+    animation: fadeBackground 40s infinite; 
+    transition: box-shadow 0.2s ease-in-out; 
+}
+
+@keyframes fadeBackground {
+    0% {
+        background-image: url('https://m.media-amazon.com/images/I/71TFagKwuGL.jpg');
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+        background-image: url('https://images.squarespace-cdn.com/content/v1/5ea0d94b7d85a34f661de262/1605244949265-9GLPC8Y32X5KKSYA00OE/AdobeStock_223353909.jpeg'); /* Replace with your second image */
+    }
+    50% {
+        opacity: 1;
+        background-image: url('https://cdn.pixabay.com/photo/2020/04/03/03/31/last-supper-4997322_1280.png');
+    }
+
+    80% {
+        opacity: 1;
+        background-image: url('https://png.pngtree.com/background/20250103/original/pngtree-heavenly-ascension-jesus-rises-amidst-the-clouds-picture-image_15582496.jpg')
+    }
 }
 
 /* Overlay effect */
@@ -140,27 +157,6 @@ header p {
     filter: grayscale(0%); /* Turns image to color on hover */
 }
 
-.arrow {
-    font-size: 2em;
-    color: #333;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-.arrow.left {
-    left: 20px;
-}
-
-.arrow.right {
-    right: 20px;
-}
-
 /* =====================
    Details Section Styles
 ===================== */
@@ -183,7 +179,7 @@ header p {
 ===================== */
 
 .audio-button {
-    background-color: #8ed5f8;
+    background-color: #41bbf8;
     color: white;
     padding: 10px 20px;
     font-size: 1em;
@@ -194,11 +190,11 @@ header p {
 }
 
 .audio-button:hover {
-    background-color: #7df0ff;
+    background-color: #067eaa;
 }
 
 /* =====================
-   Mobile Responsiveness 
+   Mobile Responsiveness (Media Queries)
 ===================== */
 
 /* For small devices (mobile) */
@@ -206,19 +202,16 @@ header p {
 
     /* Adjust header padding for small screens */
     header {
-        background-size: auto 100%;
-        background-position: centered;
-        background-attachment: scroll;
-        padding: 60px 10px; /* Reduced padding */
+        padding: 80px 10px; /* Reduced padding */
     }
 
     /* Make title and paragraph smaller */
     header h1 {
-        font-size: 2em; /* Smaller title font */
+        font-size: 2.2em;
     }
 
     header p {
-        font-size: 1em; /* Smaller paragraph font */
+        font-size: 1em;
     }
 
     /* Timeline section adjustments */
@@ -226,93 +219,52 @@ header p {
         padding: 15px;
     }
 
-    /* Carousel Container */
     .carousel-container {
         flex-direction: column; /* Stack carousel vertically */
         justify-content: center;
-        align-items: center;
     }
 
-    /* Covenant List Styling */
     #covenantList {
-        display: flex; /* Horizontal layout for items */
-        flex-direction: column; /* Allow horizontal scrolling */
-        padding: 0;
-        gap: 16px; /* Space between items */
+        display: block; /* Stack items vertically */
+        padding: 10px;
     }
 
-    /* Covenant Item Styling */
     .covenant-item {
-        width: 70px; /* Smaller width for each item */
-        text-align: center; /* Center the text */
-        margin: 0; /* Remove margin */
+        margin: 10px 0;
+        width: 80%;
+        margin-left: 10%;
     }
 
-    /* Circle Size Adjustments for Mobile */
+    /* Adjust circle sizes for smaller screens */
     .circle {
-        width: 90px; /* Smaller circles for mobile */
-        height: 90px; /* Keep aspect ratio consistent */
-        margin: 0 auto; /* Center the circle */
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Lighter shadow for better mobile aesthetics */
-    }
-
-    .circle img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ensure image fits within the circle */
-        border-radius: 50%;
-    }
-
-    /* Hover Effect on Circle */
-    .circle:hover {
-        transform: scale(1.1); /* Slight zoom effect */
-        filter: grayscale(0%); /* Colorize the image on hover */
-    }
-
-    /* Arrow Styling for Mobile */
-    .arrow {
-        font-size: 1.5em; /* Smaller arrows */
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    /* Details Section Styling */
-    #details {
-        padding: 15px;
-        max-width: 90%; /* Make the details section more flexible */
-        margin: 50px auto;
-    }
-
-    /* Adjust spacing for Timeline title */
-    #timeline h2 {
-        font-size: 1.4em; /* Slightly smaller font size for mobile */
-        margin-bottom: 10px;
-    }
-}
-
-/* For larger devices (tablets, etc.) */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-
-    /* Carousel Container for Tablet */
-    .carousel-container {
-        flex-direction: row; /* Horizontal layout */
-        justify-content: center; /* Center the items */
-    }
-
-    /* Covenant Item Styling for Tablet */
-    .covenant-item {
-        width: 100px; /* Slightly larger width for each item */
-    }
-
-    /* Circle Size Adjustments for Tablet */
-    .circle {
-        width: 80px; /* Larger circles for tablets */
+        width: 80px;
         height: 80px;
     }
 
-    /* Arrow Styling for Tablet */
     .arrow {
-        font-size: 1.8em;
+        font-size: 1.5em; /* Smaller arrows */
+    }
+
+    /* Details section */
+    #details {
+        padding: 15px;
+        max-width: 90%; /* Make the details section more flexible */
     }
 }
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .carousel-container {
+        flex-direction: row; /* Horizontal layout */
+    }
+
+    .covenant-item {
+        width: 120px; /* Slightly larger items */
+    }
+
+    .circle {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+
