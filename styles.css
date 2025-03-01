@@ -198,11 +198,7 @@ header p {
 }
 
 /* =====================
-   Mobile Responsiveness (Media Queries)
-===================== */
-
-* =====================
-   Mobile Responsiveness (Media Queries)
+   Mobile Responsiveness 
 ===================== */
 
 /* For small devices (mobile) */
@@ -210,16 +206,16 @@ header p {
 
     /* Adjust header padding for small screens */
     header {
-        padding: 80px 17px; /* Reduced padding */
+        padding: 60px 10px; /* Reduced padding */
     }
 
     /* Make title and paragraph smaller */
     header h1 {
-        font-size: 1.8em;
+        font-size: 2em; /* Smaller title font */
     }
 
     header p {
-        font-size: 1em;
+        font-size: 1em; /* Smaller paragraph font */
     }
 
     /* Timeline section adjustments */
@@ -227,53 +223,93 @@ header p {
         padding: 15px;
     }
 
+    /* Carousel Container */
     .carousel-container {
-        flex-direction: row; /* Stack carousel vertically */
+        flex-direction: column; /* Stack carousel vertically */
         justify-content: center;
+        align-items: center;
     }
 
+    /* Covenant List Styling */
     #covenantList {
-        display: block; /* Stack items vertically */
-        padding: 10px;
+        display: flex; /* Horizontal layout for items */
+        overflow-x: scroll; /* Allow horizontal scrolling */
+        padding: 0;
+        gap: 16px; /* Space between items */
     }
 
+    /* Covenant Item Styling */
     .covenant-item {
-        margin: 10px 0;
-        width: 80%;
-        margin-left: 10%;
+        width: 70px; /* Smaller width for each item */
+        text-align: center; /* Center the text */
+        margin: 0; /* Remove margin */
     }
 
-    /* Adjust circle sizes for smaller screens */
+    /* Circle Size Adjustments for Mobile */
     .circle {
-        width: 80px;
-        height: 80px;
+        width: 60px; /* Smaller circles for mobile */
+        height: 60px; /* Keep aspect ratio consistent */
+        margin: 0 auto; /* Center the circle */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Lighter shadow for better mobile aesthetics */
     }
 
+    .circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure image fits within the circle */
+        border-radius: 50%;
+    }
+
+    /* Hover Effect on Circle */
+    .circle:hover {
+        transform: scale(1.1); /* Slight zoom effect */
+        filter: grayscale(0%); /* Colorize the image on hover */
+    }
+
+    /* Arrow Styling for Mobile */
     .arrow {
         font-size: 1.5em; /* Smaller arrows */
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
-    /* Details section */
+    /* Details Section Styling */
     #details {
         padding: 15px;
         max-width: 90%; /* Make the details section more flexible */
+        margin: 50px auto;
+    }
+
+    /* Adjust spacing for Timeline title */
+    #timeline h2 {
+        font-size: 1.4em; /* Slightly smaller font size for mobile */
+        margin-bottom: 10px;
     }
 }
 
 /* For larger devices (tablets, etc.) */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+    /* Carousel Container for Tablet */
     .carousel-container {
-        flex-direction: column; /* Vertical layout */
+        flex-direction: row; /* Horizontal layout */
+        justify-content: center; /* Center the items */
     }
 
+    /* Covenant Item Styling for Tablet */
     .covenant-item {
-        width: 120px; /* Slightly larger items */
+        width: 100px; /* Slightly larger width for each item */
     }
 
+    /* Circle Size Adjustments for Tablet */
     .circle {
-        width: 80px;
+        width: 80px; /* Larger circles for tablets */
         height: 80px;
     }
+
+    /* Arrow Styling for Tablet */
+    .arrow {
+        font-size: 1.8em;
+    }
 }
-
-
