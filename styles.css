@@ -198,75 +198,303 @@ header p {
 }
 
 /* =====================
-   Mobile Responsiveness (Media Queries)
+   Body and Global Styles
 ===================== */
 
-/* For small devices (mobile) */
-@media only screen and (max-width: 600px) {
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
 
-    /* Adjust header padding for small screens */
-    header {
-        background-size: cover;
-        padding: 80px 10px; /* Reduced padding */
+/* =====================
+   Header with Background Image and Overlay
+===================== */
+
+header {
+    position: relative;
+    background-image: url('https://m.media-amazon.com/images/I/71TFagKwuGL.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeBackground 40s infinite; 
+    transition: box-shadow 0.2s ease-in-out; 
+}
+
+@keyframes fadeBackground {
+    0% {
+        background-image: url('https://m.media-amazon.com/images/I/71TFagKwuGL.jpg');
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+        background-image: url('https://images.squarespace-cdn.com/content/v1/5ea0d94b7d85a34f661de262/1605244949265-9GLPC8Y32X5KKSYA00OE/AdobeStock_223353909.jpeg'); /* Replace with your second image */
+    }
+    50% {
+        opacity: 1;
+        background-image: url('https://cdn.pixabay.com/photo/2020/04/03/03/31/last-supper-4997322_1280.png');
     }
 
-    /* Make title and paragraph smaller and center the title */
+    80% {
+        opacity: 1;
+        background-image: url('https://png.pngtree.com/background/20250103/original/pngtree-heavenly-ascension-jesus-rises-amidst-the-clouds-picture-image_15582496.jpg')
+    }
+}
+
+/* Overlay effect */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Slight dark overlay */
+    z-index: 0; /* Ensure the overlay is behind the text */
+}
+
+/* Hover effect to add a glow around the header */
+header:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7); /* White glow on hover */
+}
+
+/* =====================
+   Title Styling & Fade-in Animation
+===================== */
+
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    animation: fadeIn 2s ease-out forwards;
+    z-index: 1;
+    position: relative;
+}
+
+header p {
+    font-size: 1.2em;
+    animation: fadeIn 3s ease-out forwards;
+    animation-delay: 2s; /* Delays paragraph fade-in after title */
+    z-index: 1;
+    position: relative;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+/* =====================
+   Timeline Section Layout
+===================== */
+
+#timeline {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Carousel Container Styles */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#covenantList {
+    position: relative;
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.covenant-item {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    filter: grayscale(100%); /* Initially black and white */
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition to color */
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Hover effect - Image turns to color on hover */
+.circle:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%); /* Turns image to color on hover */
+}
+
+/* =====================
+   Details Section Styles
+===================== */
+
+#details {
+    background-color: white;
+    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.hidden {
+    display: none;
+}
+
+/* =====================
+   Additional Styling (Hover, etc.)
+===================== */
+
+.audio-button {
+    background-color: #41bbf8;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.audio-button:hover {
+    background-color: #067eaa;
+}
+
+/*======================
+Mobile setting //redone on VS code
+=======================*/
+header {
+    padding: 120px 20px;
+    /* other styles */
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 80px 20px; /* Reduce padding for tablets */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 60px 15px; /* Reduce padding further for smaller screens */
+    }
+
     header h1 {
-        font-size: 1.8em;
-        text-align: center;  /* Ensure the title is centered */
+        font-size: 2em; /* Smaller font size for small screens */
+    }
+
+    header p {
+        font-size: 1em; /* Adjust font size for readability */
+    }
+}
+
+header h1 {
+    font-size: 3em;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+header p {
+    font-size: 1.2em;
+    animation: fadeIn 3s ease-out forwards;
+    animation-delay: 2s;
+}
+
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
     }
 
     header p {
         font-size: 1em;
-        text-align: center;  /* Center the paragraph as well */
-    }
-
-    /* Timeline section adjustments */
-    #timeline {
-        padding: 15px;
-        text-align: center; /* Ensure the timeline is centered */
-    }
-
-    .carousel-container {
-        flex-direction: column; /* Stack carousel vertically */
-        justify-content: center;
-    }
-
-    #covenantList {
-        display: block; /* Stack items vertically */
-        padding: 10px;
-        text-align: center; /* Center the images */
-    }
-
-    .covenant-item {
-        margin: 10px 0;
-        width: 80%;
-        margin-left: 10%;
-    }
-
-    /* Adjust circle sizes for smaller screens */
-    .circle {
-        width: 80px;
-        height: 80px;
-    }
-
-    .circle img {
-        object-fit: cover; 
-    }
-
-    /* Details section */
-    #details {
-        padding: 15px;
-        max-width: 90%; /* Make the details section more flexible */
-    }
-
-    /* Ensure the header background image doesn't get too zoomed in */
-    header {
-        background-size: cover;
-        background-position: center;
     }
 }
 
+.carousel-container {
+    width: 100%;
+    padding: 0 10px; /* Add padding to avoid images being cut off */
+}
 
+#covenantList {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center;
+}
 
+.covenant-item {
+    flex: 1 1 100%; /* Allow items to take full width on smaller screens */
+    max-width: 300px; /* Limit width of each item */
+    margin: 10px;
+    text-align: center;
+}
 
+.circle {
+    width: 100%;
+    max-width: 120px; /* Limit circle size on mobile */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#details {
+    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+@media only screen and (max-width: 768px) {
+    #details {
+        max-width: 500px; /* Reduce max-width for tablets */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #details {
+        max-width: 100%; /* Allow full width for small screens */
+        padding: 15px; /* Reduce padding */
+    }
+}
