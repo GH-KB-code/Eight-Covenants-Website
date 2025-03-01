@@ -142,7 +142,6 @@ header p {
     align-items: center;
     overflow: hidden;
     background-color: white;
-    border-radius: 50%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     filter: grayscale(100%); /* Initially black and white */
     transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition to color */
@@ -152,7 +151,6 @@ header p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
 }
 
 /* Hover effect - Image turns to color on hover */
@@ -206,7 +204,9 @@ header p {
 
     /* Adjust header padding for small screens */
     header {
-        padding: 70px 10px; /* Reduced padding */
+        padding: 0px; 
+        background-size: cover;
+        background-align: center;
     }
 
     /* Make title and paragraph smaller and center the title */
