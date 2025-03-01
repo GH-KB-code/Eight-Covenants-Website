@@ -1,3 +1,7 @@
+/* =====================
+   Body and Global Styles
+===================== */
+
 body {
     font-family: 'Playfair Display', serif;
     background-color: #f7f7f7;
@@ -193,50 +197,11 @@ header p {
     background-color: #067eaa;
 }
 
-
-    /* Timeline section adjustments */
-    #timeline {
-        padding: 15px;
-    }
-
-    .carousel-container {
-        flex-direction: column; /* Stack carousel vertically */
-        justify-content: center;
-    }
-
-    #covenantList {
-        display: block; /* Stack items vertically */
-        padding: 10px;
-    }
-
-    .covenant-item {
-        margin: 10px 0;
-        width: 80%;
-        margin-left: 10%;
-    }
-
-    /* Adjust circle sizes for smaller screens */
-    .circle {
-        width: 80px;
-        height: 80px;
-    }
-
-    .arrow {
-        font-size: 1.5em; /* Smaller arrows */
-    }
-
-    /* Details section */
-    #details {
-        padding: 15px;
-        max-width: 90%; /* Make the details section more flexible */
-    }
-}
-
-* =====================
-   Mobile Responsiveness 
+/* =====================
+   Mobile Responsiveness (Media Queries)
 ===================== */
 
-/* (mobile) */
+/* For small devices (mobile) */
 @media only screen and (max-width: 600px) {
 
     /* Adjust header padding for small screens */
