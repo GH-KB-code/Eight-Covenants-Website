@@ -201,10 +201,13 @@ header p {
    Mobile Responsiveness (Media Queries)
 ===================== */
 
-    /*Adjust header padding for small screens */
+/* For small devices (mobile) */
+@media only screen and (max-width: 600px) {
+
+    /* Adjust header padding for small screens */
     header {
-        padding: 80px 10px; 
-    } 
+        padding: 80px 20px; /* Reduced padding */
+    }
 
     /* Make title and paragraph smaller and center the title */
     header h1 {
@@ -212,13 +215,8 @@ header p {
         text-align: center;  /* Ensure the title is centered */
     }
 
-    header h2 {
-        font-size: 1.2em;
-        text-align: center;  /* Center the paragraph as well */
-    }
-   
-   p {
-        font-size: 1.2em;
+    header p {
+        font-size: 1.3em;
         text-align: center;  /* Center the paragraph as well */
     }
 
@@ -263,7 +261,7 @@ header p {
 
     /* Ensure the header background image doesn't get too zoomed in */
     header {
-        background-size: auto 100%;
+        background-size: contain;
         background-position: center;
     }
 }
