@@ -228,7 +228,7 @@ header p {
     }
 
     .carousel-container {
-        flex-direction: column; /* Stack carousel vertically */
+        flex-direction: row; /* Stack carousel vertically */
         justify-content: center;
     }
 
