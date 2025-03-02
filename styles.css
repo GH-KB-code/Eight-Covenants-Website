@@ -198,70 +198,89 @@ header p {
 }
 
 /* =====================
-   Mobile Responsiveness (Media Queries)
+   Mobile Responsiveness 
 ===================== */
 
-/* For small devices (mobile) */
 @media only screen and (max-width: 600px) {
 
-    /* Adjust header padding for small screens */
+    /* Adjust header padding for better spacing */
     header {
-        padding: 80px 10px; /* Reduced padding */
+        padding: 60px 10px; /* Further reduced padding for smaller screens */
+        background-size: contain; /* Ensures the entire image fits within the screen */
+        background-position: center top; /* Centers the image better */
     }
 
-    /* Make title and paragraph smaller and center the title */
+    /* Ensure background images resize correctly in animation */
+    @keyframes fadeBackground {
+        0% {
+            background-size: contain;
+            background-image: url('https://m.media-amazon.com/images/I/71TFagKwuGL.jpg');
+        }
+        30% {
+            background-size: contain;
+            background-image: url('https://images.squarespace-cdn.com/content/v1/5ea0d94b7d85a34f661de262/1605244949265-9GLPC8Y32X5KKSYA00OE/AdobeStock_223353909.jpeg');
+        }
+        50% {
+            background-size: contain;
+            background-image: url('https://cdn.pixabay.com/photo/2020/04/03/03/31/last-supper-4997322_1280.png');
+        }
+        80% {
+            background-size: contain;
+            background-image: url('https://png.pngtree.com/background/20250103/original/pngtree-heavenly-ascension-jesus-rises-amidst-the-clouds-picture-image_15582496.jpg');
+        }
+    }
+
+    /* Make title and paragraph smaller but readable */
     header h1 {
-        font-size: 2.2em;
-        text-align: center;  /* Ensure the title is centered */
+        font-size: 2.5em;
+        text-align: center;
+        padding: 10px;
+        line-height: 1.2;
     }
 
     header p {
-        font-size: 1em;
-        text-align: center;  /* Center the paragraph as well */
+        font-size: 1.1em;
+        text-align: center;
+        max-width: 90%;
+        margin: auto;
     }
 
-    /* Timeline section adjustments */
+    /* Ensure timeline section fits well */
     #timeline {
         padding: 15px;
-        text-align: center; /* Ensure the timeline is centered */
+        text-align: center;
     }
 
     .carousel-container {
-        flex-direction: column; /* Stack carousel vertically */
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     #covenantList {
-        display: block; /* Stack items vertically */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         padding: 10px;
-        text-align: center; /* Center the images */
     }
 
     .covenant-item {
-        margin: 10px 0;
-        width: 80%;
-        margin-left: 10%;
+        margin: 10px;
+        width: auto;
     }
 
-    /* Adjust circle sizes for smaller screens */
+    /* Adjust circle sizes for better fit */
     .circle {
-        width: 80px;
-        height: 80px;
+        width: 90px;
+        height: 90px;
     }
 
     .circle img {
-        object-fit: cover; 
+        object-fit: contain;
     }
 
-    /* Details section */
+    /* Details section should be more flexible */
     #details {
         padding: 15px;
-        max-width: 90%; /* Make the details section more flexible */
-    }
-
-    /* Ensure the header background image doesn't get too zoomed in */
-    header {
-        background-size: cover;
-        background-position: center;
+        max-width: 95%;
     }
 }
