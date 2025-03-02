@@ -26,7 +26,6 @@ header {
     text-align: center;
     padding: 120px 20px;
     position: relative;
-    overflow: hidden;
     animation: fadeBackground 40s infinite; 
     transition: box-shadow 0.2s ease-in-out; 
 }
@@ -221,9 +220,10 @@ p{
 
         }
     
-
     /* Adjust header padding for small screens */
     header {
+        background-size: contain;
+       background-position: center;
         padding: 80px 10px; /* Reduced padding */
     }
 
