@@ -241,7 +241,6 @@ header p {
     header p {
         font-size: 1.1em;
         text-align: center;
-        max-width: 90%;
         margin: auto;
     }
 
@@ -275,7 +274,7 @@ header p {
     }
 
     .circle img {
-        object-fit: contain;
+        object-fit: cover;
     }
 
     /* Details section should be more flexible */
