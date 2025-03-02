@@ -80,6 +80,15 @@ header h1 {
     position: relative;
 }
 
+header h2 {
+    font-size: 1.4em; /* Slightly smaller for better fit */
+    text-align: center;
+    margin: 10px auto;
+    line-height: 1.2;
+    word-wrap: break-word;
+    max-width: 90%; /* Prevents overflow */
+}
+
 header p {
     font-size: 1.2em;
     animation: fadeIn 3s ease-out forwards;
@@ -237,12 +246,11 @@ header p {
         padding: 10px;
         line-height: 1.2;
     }
-
-     header h2 {
-        font-size: 1.5em;
-        text-align: center;
-        margin: auto;
-        line-height: 1.2;
+   
+      header h2 {
+        font-size: 1.2em; /* Reduce size on smaller screens */
+        max-width: 95%; /* Ensures it fits within screen */
+        padding: 5px;
     }
 
     header p {
