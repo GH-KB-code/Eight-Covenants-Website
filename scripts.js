@@ -262,3 +262,4 @@ function closeDetails() {
 
 // Initialize the carousel
 renderCovenantList();
+
