@@ -1,3 +1,4 @@
+// Sample data for covenants
 const covenantData = [
     {
         id: 'covenant1',
@@ -6,13 +7,14 @@ const covenantData = [
         description: `
         
         <p><strong>Genesis 1:26-28</strong></p>
+
         <p>"Then God said, "Let Us make man in Our image, according to Our likeness; let them have dominion over the fish of the sea, over the birds of the air, 
         and over the cattle, over all the earth and over every creeping thing that creeps on the earth." 
         So God created man in His own image; in the image of God He created him; male and female He created them. 
         Then God blessed them, and God said to them, "Be fruitful and multiply; fill the earth and subdue it; 
         have dominion over the fish of the sea, over the birds of the air, and over every living thing that moves on the earth."</p>
  
-        <p>At the very beginning, God created the heavens and the earth, placing mankind in the perfect setting— the Garden of Eden. 
+        <p1>At the very beginning, God created the heavens and the earth, placing mankind in the perfect setting— the Garden of Eden. 
         The Edenic Covenant was a simple yet profound agreement. Adam and Eve were to enjoy the paradise of Eden, which was filled with beauty 
         and abundance. They were commanded to be fruitful, multiply, fill the earth, and have dominion over all creation.
         
@@ -21,7 +23,7 @@ const covenantData = [
         By obeying, they would continue in perfect communion with Him. Unfortunately, Adam and Eve chose to disobey, and this 
         breach of covenant brought sin, death, and separation from God into the world. Despite their disobedience, 
         God showed mercy and love. He promised that one day, the "seed of the woman" would crush the serpent's head— a prophecy 
-        signaling God's intention to redeem humanity.</p>
+        signaling God's intention to redeem humanity.</p1>
         `,
         audioSrc: 'audio/edenic_recording.m4a',
         
@@ -40,7 +42,7 @@ const covenantData = [
             eat of it you shall surely die.”</p>
 
 
-            <p>Following the fall of Adam and Eve, God issued the Adamic Covenant,
+            <p1>Following the fall of Adam and Eve, God issued the Adamic Covenant,
             which was not a new promise but a continuation of the covenant of grace
             in the face of sin. 
             
@@ -50,7 +52,7 @@ const covenantData = [
             God extended a glimmer of hope. The promise of the future seed of the woman
             to defeat the serpent marked the beginning of God's redemptive plan.
             While sin would reign in the world, God's ultimate intention was to restore
-            what had been lost.</p>
+            what had been lost.</p1>
         `,
         audioSrc: 'audio/adamic_recording.m4a',
         
@@ -68,7 +70,7 @@ const covenantData = [
              every living creature as I have done. While the earth remains, seedtime and harvest, cold and heat, summer and winter, 
              day and night, shall not cease.” </p>
 
-            <p>As humanity continued to sin, the world became more corrupt. God decided to cleanse the Earth through a great flood, 
+            <p1>As humanity continued to sin, the world became more corrupt. God decided to cleanse the Earth through a great flood, 
             saving only Noah and his family. After the flood, God made the Noahic Covenant with Noah 
             and his descendants, as well as every living creature on the Earth. 
         
@@ -78,7 +80,7 @@ const covenantData = [
             While the Noahic Covenant did not remove the problem of sin, it showed God’s mercy. 
             It demonstrated that although sin on the earth remained, God was committed to preserving life 
             and working through human history to bring about His plan of salvation. 
-            The Noahic Covenant was a fresh start for humanity, with the command to be fruitful and multiply still intact.</p>
+            The Noahic Covenant was a fresh start for humanity, with the command to be fruitful and multiply still intact.</p1>
         `,
         audioSrc: 'audio/noahic_recording.m4a',
         
@@ -95,7 +97,7 @@ const covenantData = [
             I will bless those who bless you, and him who dishonors you I will curse; and in you all the families of the earth shall 
             be blessed.” </p>
 
-                        The next significant step in God’s redemptive plan was His covenant with Abraham. 
+                        <p1>The next significant step in God’s redemptive plan was His covenant with Abraham. 
                         God called Abraham from his homeland and promised to make him the father of a great nation. 
                         This was the Abrahamic Covenant, which contained 3 main promises: land, numerous descendants, 
                         and a great blessing to all nations through Abraham’s lineage. 
@@ -103,7 +105,7 @@ const covenantData = [
                         This covenant set the stage for Israel’s future as a nation. More significantly, 
                         God promised that through Abraham’s seed, all the nations of the earth would be blessed. 
                         This promise would ultimately be fulfilled in the person of Jesus Christ, 
-                        who would bring the ultimate blessing of salvation to the world.`,
+                        who would bring the ultimate blessing of salvation to the world.</p1>`,
         audioSrc: 'audio/abrahamic_recording.m4a',
     },
 
@@ -123,7 +125,7 @@ const covenantData = [
                      to the people of Israel." </p>
                     
                     
-                    The Mosaic Covenant was established after God delivered the Israelites from slavery in Egypt. 
+                    <p1>The Mosaic Covenant was established after God delivered the Israelites from slavery in Egypt. 
                     At Mount Sinai, God gave the law to Moses, which included the Ten Commandments and a detailed system of laws for Israel to follow.
                      This covenant was conditional. If Israel obeyed God’s commands, then they would be His treasured possession, a kingdom of priests, 
                      and a holy nation. The Mosaic Covenant set apart Israel as a special people, distinct from all other nations. 
@@ -132,11 +134,36 @@ const covenantData = [
                      However, it also showed that humanity was not always able to perfectly follow God’s laws. 
                      The law acted as a mirror, showing Israel their sin and their need for a Savior. 
                      The Mosaic Covenant was not the end of God’s promises but a stepping stone toward the fulfillment of His redemptive plan. 
-                     It foreshadowed Christ, who came not to abolish the law but to fulfill it perfectly.`,
+                     It foreshadowed Christ, who came not to abolish the law but to fulfill it perfectly.</p1>`,
         audioSrc: 'audio/mosaic_recording.m4a',
     },
     {
         id: 'covenant6',
+        title: 'Land Covenant',
+        imgSrc: 'https://miro.medium.com/v2/resize:fit:1280/0*W5oP1Hoxme13ODW2.jpeg',
+        description: `
+                    <p><strong> Deuteronomy 30:1-6 </strong></p>
+
+                    <p>“When all these blessings and curses I have set before you come on you and you take them to heart wherever the Lord your God disperses 
+                    you among the nations, and when you and your children return to the Lord your God and obey him with all your heart and with all your soul 
+                    according to everything I command you today, then the Lord your God will restore your fortunes and have compassion on you and gather you 
+                    again from all the nations where he scattered you. Even if you have been banished to the most distant land under the heavens, from there 
+                    the Lord your God will gather you and bring you back. He will bring you to the land that belonged to your ancestors, 
+                    and you will take possession of it. He will make you more prosperous and numerous than your ancestors. 
+                    The Lord your God will circumcise your hearts and the hearts of your descendants, so that you may love him with all your heart and with all your soul, and live." </p>
+
+
+                    <p1> In this Land Covenant, God promises to restore His people Israel after they have faced the consequences of their disobedience, 
+                    which included being scattered among the nations. He assures them that when they repent, return to Him, and obey His commands with all their heart 
+                    and soul, He will bring them back to their land and bless them even more abundantly than before. The passage emphasizes God's compassion and His 
+                    desire for true transformation, symbolized by the circumcision of their hearts. This metaphorical circumcision signifies an inner spiritual renewal, 
+                    where God's people are given the ability to love Him fully and live according to His will. Ultimately, this passage highlights God's mercy, 
+                    His readiness to forgive, and His intention to restore His people to a thriving and prosperous relationship with Him.In this covenant, </p1>`,
+
+        audioSrc: '',
+    },
+    {
+        id: 'covenant7',
         title: 'Davidic Covenant',
         imgSrc: 'https://www.jesuswalk.com/psalms/images/gerrit-van-honthorst-king-david-playing-the-harp-1611-1156x1407x300.jpg',
         description: `
@@ -146,15 +173,16 @@ const covenantData = [
                     A King shall reign and prosper, And execute judgment and righteousness in the earth." </p>
 
 
-                    <p> God’s covenant with David was a turning point. The Davidic covenant promised that David’s descendant would rule over Israel forever. 
+                    <p1> God’s covenant with David was a turning point. The Davidic covenant promised that David’s descendant would rule over Israel forever. 
                     The kingdom hat would never end. This was fulfilled in Jesus who reigns as eternal King. 
                     The Davidic covenant pointed to the Messianic hope in christ whose reign would not be limited to an earthly kingdom but also to an eternal kingdom, 
-                    ushering in God’s eternal rule over all creation. Through David’s lineage, God promises a savior who establishes God’s Kingdom, forever.</p>`,
+                    ushering in God’s eternal rule over all creation. Through David’s lineage, God promises a savior who establishes God’s Kingdom, forever.</p1>`,
 
         audioSrc: 'audio/davidic_recording.m4a',
     },
+    
     {
-        id: 'covenant7',
+        id: 'covenant8',
         title: 'New Covenant',
         imgSrc: 'https://i.pinimg.com/736x/54/b0/19/54b019c9aa38f7347178720c359b1f3b.jpg',
         description: `
@@ -168,33 +196,15 @@ const covenantData = [
                         from the least of them to the greatest, declares the Lord. For I will forgive their iniquity, and I will remember their 
                         sin no more."</p>
         
-                        <p> 
+                        <p1> 
                         The New covenant was promised by God to the prophet Jeremiah and it was established by Jesus at the Last Supper. 
                         In this covenant, God promised to forgive the sins of His people and to write His laws on their hearts. 
                         The New covenant is unconditional. It promises forgiveness and eternal life through the sacrifice of Jesus Christ. 
                         This covenant is not based on keeping the law but on faith on Jesus Christ who is the mediator of this covenant. 
                         The new covenant was fulfilled in Jesus Christ whose death and resurrection made the forgiveness of sin available to all. 
-                        This is the ultimate covenant, offering salvation through faith in christ and not by works in guaranteeing eternal life.</p>`,
+                        This is the ultimate covenant, offering salvation through faith in christ and not by works in guaranteeing eternal life.</p1>`,
         
             audioSrc: 'audio/new_recording.m4a',
-    },
-    {
-        id: 'covenant8',
-        title: 'Eternal Covenant',
-        imgSrc: 'https://i.swncdn.com/media/1280w/via/images/2023/10/16/33048/33048-istockgetty-images-plusnorima_source_file.jpg',
-        description: `
-                    <p><strong> Hebrews 13:20 </strong></p>
-                    <p>
-                    "Now may the God of peace who brought again from the dead our Lord Jesus, the great shepherd of the sheep, by the blood of the eternal covenant, equip you
-                     with everything good that you may do his will, working in us that which is pleasing in his sight, through Jesus Christ, 
-                     to whom be glory forever and ever. Amen."</p>
-
-                     <p>The final covenant known as the eternal covenant was the secured through the death and resurrection of Jesus Christ.
-                     This covenant signifies the completion and fulfillment of all previous covenants. It is eternal, because Jesus Christ’s sacrifice is meant to be 
-                     for all time, offering eternal redemption for those who believe in him. In the eternal covenant, all those who trust in Jesus are meant to reconcile with God forever. 
-                     Jesus is perfect and complete. Through this covenant, believers are promised eternal life and an unbreakable relationship with God.`,
-        
-        audioSrc: 'audio/eternal_recording.m4a',
     }
 ];
 
@@ -250,4 +260,5 @@ function closeDetails() {
     document.getElementById('details').classList.add('hidden');
 }
 
+// Initialize the carousel
 renderCovenantList();
